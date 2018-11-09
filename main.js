@@ -1,19 +1,70 @@
 const techs = [
+  "Apollo",
   "Angular",
+  "Apache",
+  "AWS",
+  "Backbone",
+  "bacon.js",
+  "bluebird",
+  "C++",
+  "DynamoDB",
+  "Kibana",
+  "ElasticSearch",
+  "Lua",
+  "Clojure",
+  "Lambda",
+  "Firebase",
+  "Grails",
+  "Grafana",
+  "CORBA",
+  "Glassfish",
+  "Golang",
+  "Hibernate",
+  "Haskell",
+  "Elm",
+  "Hypervisor",
+  "Docker",
+  "Kubernetes",
+  "Java",
+  "OCaml",
+  "OpenStack",
+  "Perl",
+  "QuickBasic",
+  "Silverlight",
+  "Vue",
+  "Terraform",
   "React",
+  "Ruby on Rails",
   "Nodejs",
   "Express",
-  "Postgres",
+  "Elixir",
+  "Idris",
+  "PostgreSQL",
+  "Linux",
   "MySQL",
   "MongoDB",
+  "MariaDB",
   "Neo4js database",
-  "Apache",
   "Kafka",
   "Cassandra",
   "GraphQL",
   "db2",
   "Cordova",
-  "Phonegap"
+  "Phonegap",
+  "PHP",
+  "Tensorflow",
+  "Keras",
+  "Caffe",
+  "Spark",
+  "Mesos",
+  "Kinesis",
+  "Scala",
+  "Play framework",
+  "Django",
+  "Nginx",
+  "Zookeeper",
+  "Protobuf",
+  "Hadoop"
 ]
 
 const techsByFirstLetter = groupBy(techs, 0)
@@ -39,6 +90,8 @@ function decideStack(acronym) {
   return stack
 }
 
+console.log(decideStack("REAKTOR"))
+console.log(decideStack("LOL"))
 console.log(decideStack("GRAND"))
 console.log(decideStack("LAMP"))
 console.log(decideStack("MEGA"))
