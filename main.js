@@ -67,6 +67,8 @@ const techs = [
   "Hadoop"
 ]
 
+const WHITESPACE = /\s/
+
 function techsByFirstLetter() {
   return techs.reduce((rv, x) => {
     (rv[x[0].toUpperCase()] = rv[x[0].toUpperCase()] || []).push(x);
@@ -77,6 +79,9 @@ function techsByFirstLetter() {
 function decideStack(acronym) {
   const acronymArray = acronym.split('')
   const stack = acronymArray.reduce((accu, character) => {
+    if (WHITESPACE.test(character)) {
+      return accu.concat('')
+    }
     const suitableTechs = techsByFirstLetter()[character.toUpperCase()]
     if (suitableTechs === undefined) {
       return accu.concat('NO IDEA')
