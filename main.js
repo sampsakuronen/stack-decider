@@ -109,7 +109,7 @@ function ready(fn) {
 
 function init() {
   const input = document.querySelector('input[name=acronym]')
-  input.addEventListener('keyup', showStack)
+  input.addEventListener('input', showStack)
 }
 
 ready(init)
